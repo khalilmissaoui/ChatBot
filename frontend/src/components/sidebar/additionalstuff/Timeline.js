@@ -12,7 +12,9 @@ import Typography from "@material-ui/core/Typography";
 import StepDetails from './StepDetails';
 import axios from '../../../axios/axios'
 import {addmessage,selectMessages} from '../../../Redux/chatSlice'
+import {initialingData,selectquizScore} from '../../../Redux/quizslice'
 
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,9 +38,8 @@ function Timeline() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const scenario =  useSelector(selectScenario); 
-  React.useEffect(() => {
-    
-  }, [doneSenario])
+  const scores =  useSelector(selectquizScore)
+
   
   React.useEffect(() => {
     const fetchdata = async ()=> {const result = await axios.get('/scenario/selectedScenarioByuserId')
@@ -61,9 +62,17 @@ function Timeline() {
     console.log(result.data);}}
 x();
       }, [activeStep])
+      const history = useHistory();
   
   const handleNext = () => {
     //Await ! ! !
+    if(scores <= 7){
+      alert('inferieur ');
+      return
+    }else {
+    dispatch(initialingData(0))
+
+    console.log('this is the score from redux',scores);
   setActiveStep((prevActiveStep) => prevActiveStep + 1);
   if(activeStep === scenario.scenario_id.steps.length - 1) {
     console.log('in the end of the day everything is gonna be alright & if its not , its not')
@@ -77,19 +86,21 @@ x();
     })
     //We will trigger an event to ask our user to choose another scenario !! then based on his answer we will change it in the backend a
     // and send him a message that we did it x
-  }
+  }}
   };
 
   const handleBack = () => {
    setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-
+  const goquiz= ()=>{
+    history.push('/quiz')
+  }
   const handleReset = () => {
     setActiveStep(0);
   };
     return (
         <div>
-          {console.log('scenario this is ',!scenario)}
+          {console.log('this is the scores ',scores)}
           <div >
             { !scenario  ?  <div>null</div> :
                 (
@@ -104,21 +115,23 @@ x();
                       <StepDetails course={label} /> 
                       <div >
                         <div>
-                          <Button
-                          
-                            onClick={handleBack}
-                          
-                          >
-                            Back
-                          </Button>
+                      
+                        { scores <= 7 ?  
                           <Button
                             variant="contained"
                             color="primary"
-                            onClick={handleNext}
-                          
+                            onClick={goquiz}
                           >
-                            Next
-                          </Button>
+                            Quiz
+                          </Button> :
+                          <Button
+                          variant="contained"
+                          color="primary"
+                          onClick={handleNext}
+                        
+                        >
+                          Next
+                        </Button> }
                         </div>
                       </div>
                     </StepContent>

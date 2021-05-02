@@ -10,7 +10,7 @@ import {addmessage,selectMessagesAuth} from '../../Redux/chatAuthSlice'
 import { useDispatch} from 'react-redux'
 import { UserContext } from '../../contextProvider/contextProvider';
 
-function MessageInputAuth({AuthMessages , setAuthMessages}) {
+function MessageInputAuth({forget , setforget}) {
     const dispatch = useDispatch();
     const [input, setInput] = useState("");
     const history = useHistory();
@@ -73,6 +73,7 @@ function MessageInputAuth({AuthMessages , setAuthMessages}) {
                         }, 3000);
                 }
             }).catch((er)=>{
+              
                 console.log('you should check your  credentials')
                 const usermsg = {
                     source : 'bot',
@@ -81,13 +82,22 @@ function MessageInputAuth({AuthMessages , setAuthMessages}) {
                 setfields('email');
                 setRequest({source : 'user'})
                 dispatch(addmessage(usermsg))
+                const forgetpass = {
+                    source : 'bot',
+                    msg : "if you forget your password please check the link down"
+                }
+                setTimeout(() => {
+                    setforget(true)
+                dispatch(addmessage(forgetpass))
+                }, 1900);
+               
                 const usermsgss = {
                     source : 'bot',
-                    msg : "Let's try again if you want ! can I get your email ?"
+                    msg : "Otherwise , Let's try again if you want ! can I get your email ?"
                 }
                 setTimeout(() => {
                 dispatch(addmessage(usermsgss))
-                }, 1500);
+                }, 3000);
             })
             
             

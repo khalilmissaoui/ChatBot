@@ -16,7 +16,7 @@ import PublishIcon from '@material-ui/icons/Publish';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import ProgressBarSavedCourse from './ProgressBarSavedCourse';
 
-function SavedDialogs({open ,setOpen, course}) {
+function SavedDialogs({open ,setOpen, course , percentage}) {
 
 
     const styles = (theme) => ({
@@ -83,15 +83,11 @@ function SavedDialogs({open ,setOpen, course}) {
               <LanguageIcon style={{ marginRight:"5px"}}/> {course.language?`${course.language}`:'EN-US'} <PublishIcon style={{ marginLeft:"10px", marginRight:"5px"}}/> {course.course_id.date?`${course.course_id.date}`.substr(0,10):'NaN'}  <AccessTimeIcon style={{ marginLeft:"10px" , marginRight:"5px"}}/>{course.course_id.duration?`${course.course_id.duration}`:'NaN'} </div>
               
             </FirstPart>
-         <ProgressBarSavedCourse Coursename="angular"  percentage={course.progress}/>
+         <ProgressBarSavedCourse Coursename="angular"  percentage={percentage}/>
               </Container>
   
         </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
-            Save changes
-          </Button>
-        </DialogActions>
+       
       </Dialog>
             </div>
         )

@@ -5,6 +5,8 @@ import savedcourseSliceReducer from './savedcourseSlice'
 import chatAuthReducer from './chatAuthSlice'
 import chatRegisterReducer from './chatRegisterSlice'
 import stepsReducer from './stepsSlice'
+import quizReducer from './quizslice'
+
 
 
 
@@ -16,6 +18,7 @@ export default configureStore({
       savedcourse :savedcourseSliceReducer,
       chatAuth : chatAuthReducer,
       chatRegister: chatRegisterReducer,
-      steps: stepsReducer
+      steps: stepsReducer,
+      quizScore : quizReducer
   }
 })

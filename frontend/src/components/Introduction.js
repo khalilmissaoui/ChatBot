@@ -16,6 +16,13 @@ function Introduction() {
     return (
         <Container>
           <Steps activeStep={0}/>
+          <div style={{marginTop:'-60px' , height:'60px' , display:'flex' , justifyContent:'flex-end', marginRight:'150px'}}>
+           <GoogleButton>
+            <a href='Oauth2' target='_blank'>
+             <img src='https://img.icons8.com/bubbles/2x/google-logo.png'></img>
+            </a>
+           </GoogleButton>
+          </div>
           <HeadTitle>
             Choose your path
           </HeadTitle>
@@ -44,6 +51,39 @@ background : orange;
 width: 100%;
 height: 100vh;
 
+`
+
+const GoogleButton =styled.button`
+width: 60px;
+height: 60px;
+border-radius: 30px;
+display : flex ; 
+align-items : center ;
+justify-content : center ;
+overflow: hidden;
+
+font-family: 'Roboto', sans-serif;
+color: #000;
+background-color: #fff;
+border: none;
+
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+
+img {
+    width: 100%;
+      height: 100%;
+    
+    box-shadow :0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+:hover{
+ 
+  box-shadow: 0px 15px 20px grey;
+  color: #fff;
+  transform: translateY(-7px);
+}
 
 `
 const HeadTitle = styled.div`

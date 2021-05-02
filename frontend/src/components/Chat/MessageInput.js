@@ -64,13 +64,13 @@ function MessageInput() {
    
     return (
         <Container>
-          
-            <InputContainer>
-                <form>
-                <RecordButton 
+           <RecordButton 
                         onClick={clickMic}>
                         {   Clicked?<MicNoneIcon/>:<MicIconStyled/>}    
             </RecordButton>
+            <InputContainer>
+                <form>
+            
                     <input 
                         onChange={(e)=>setInput(e.target.value)}
                         type="text" 
@@ -94,6 +94,9 @@ const Container = styled.div`
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 24px;
+    display: grid;
+    grid-template-columns:  5% auto;
+
 `
 
 const InputContainer = styled.div`

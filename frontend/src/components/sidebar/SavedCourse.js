@@ -56,7 +56,7 @@ function SavedCourse({course}) {
                 </div>
             </Func>
         </Container>
-          <SavedDialogs course={course} open={open} setOpen={setOpen} />
+          <SavedDialogs percentage={percentage} course={course} open={open} setOpen={setOpen} />
           <SnackDelete  openSlack={openSlack} setOpenSlack={setOpenSlack} />
           </>
     )

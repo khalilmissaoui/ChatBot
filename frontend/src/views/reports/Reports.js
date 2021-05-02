@@ -34,7 +34,9 @@ const getBadge = status => {
   var unSolvedReports=0;
   
   const fields = ['name', 'send_date','role','description','status','Delete_report'];
-  const deleteReport = (id) => {Axios.delete(`http://localhost:3001/report/delete/${id}`)}
+  const deleteReport =async (id) => {Axios.delete(`http://localhost:3001/report/delete/${id}`)
+   window.location.reload(false);
+}
   
 
 function Reports(){

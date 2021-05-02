@@ -6,7 +6,7 @@ function Botmessage( {message}) {
     return (
         <Container>
         <UserAvatar>
-        <img src="https://media.istockphoto.com/photos/businesswoman-portrait-on-white-picture-id615279718?k=6&m=615279718&s=612x612&w=0&h=ozD8oKRFXmyyXoAcDuo09WSkmtLSYYlOBuCCNrMyW2Y="/>
+        <img  src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif"/>
         </UserAvatar>
 
         <UserChatbox>
@@ -41,6 +41,8 @@ const UserAvatar = styled.div`
     border : 0.1px solid  #c2c2d6;
     img {
         width: 100%;
+          height: 100%;
+        
         box-shadow :0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
 `

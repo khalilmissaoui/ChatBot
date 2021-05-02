@@ -11,7 +11,8 @@ import Introduction from "./components/Introduction";
 import Welcome from "./components/Welcome";
 import { UserContext } from "./contextProvider/contextProvider";
 import { useHistory } from "react-router-dom";
-
+import QuizCategories from "./components/Quiz/QuizCategories";
+import Logout from "./components/Logout"
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -58,6 +59,12 @@ const App = () => {
             </Route>
             <Route path="/auth">
               <ChatbotAuth />
+            </Route>
+            <Route path="/quiz">
+              <QuizCategories />
+            </Route>
+            <Route path="/logout">
+              <Logout />
             </Route>
             <Route path="/">
               <Welcome />
