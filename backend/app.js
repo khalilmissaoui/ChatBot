@@ -11,6 +11,8 @@ const auth = require("./routes/auth");
 const register = require("./routes/register")
 const scenario = require("./routes/scenario")
 const userss = require("./routes/user")
+const userRouter =  require("./routes/userRouter")
+
 
 
 
@@ -30,7 +32,9 @@ app.use("/auth", auth);
 app.use("/register",register)
 app.use("/scenario",scenario)
 app.use("/user", userss);
+app.use("/userRouter", userRouter);
 app.use("/", indexRouter);
+
 
 
 

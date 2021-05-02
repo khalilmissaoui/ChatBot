@@ -4,6 +4,7 @@ mongoose.connect('mongodb://localhost/PI')
 .catch( (er)=> console.log(er) )
 
 const courseSchenma = new mongoose.Schema({
+    id : Number ,
     name: String, 
     content : String ,
     state : {

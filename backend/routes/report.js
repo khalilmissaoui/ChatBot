@@ -6,7 +6,7 @@ const {Report} = require('../Models/reports')
 // /report
 router.post('/add',async (req,res)=>{
     const report = new Report({
-        'content' : req.body.content ,
+        'Description' : req.body.content ,
         'img' : req.body.img,
         'sender' : req.body.sender
     })
@@ -51,7 +51,7 @@ router.route('/').get((req, res) => {
 
 router.route('/delete/:id').delete( async (req,res) => {
     const id = req.params.id;
-    Report.deleteOne({_id: id})
+    Report.findOneAndDelete({_id: id})
     .then(() => res.status(200).json({message: 'Report deleted successfully!'}))
     .catch(err => res.status(400).json({err}));
 })

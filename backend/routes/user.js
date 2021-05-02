@@ -4,7 +4,7 @@ module.exports = router;
 const {User} = require('../Models/user')
 const {auth} = require('../Middlwares/middlewareAUTH');
 
-router.use(auth)
+//router.use(auth)
 
 router.route('/').get((req, res) => {
   User.find()
@@ -74,7 +74,7 @@ router.post('/webscarping' , async (req,res )=>{
     
     const saveeduser = await user.save();
    
-    res.send(saveeduser)
+    res.send(result)
 
 
 
@@ -163,7 +163,7 @@ const x =(async (linkedinlink) => {
       await autoScroll(page);
       await page.waitForSelector('span[class="pv-skill-category-entity__name-text t-16 t-black t-bold"]')
       const foramtion = await page.$eval('h3[class="pv-entity__school-name t-16 t-black t-bold"]' , td => td.innerText)
-       const situation = await page.$eval('h2[class="mt1 t-18 t-black t-normal break-words"]' , td => td.innerText)
+       const situation = await page.$eval('div[class="text-body-medium break-words"]' , td => td.innerText)
        const text = await page.$$eval('span[class="pv-skill-category-entity__name-text t-16 t-black t-bold"]' , tds => tds.map((td) => {
          return td.innerText;
       }))
