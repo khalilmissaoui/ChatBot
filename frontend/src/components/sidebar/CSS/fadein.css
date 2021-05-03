@@ -1,0 +1,78 @@
+.fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+    transition: 1s ease-in-out;
+  
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+      transform: scale(0.3);
+     
+    }
+    100% {
+      opacity:1;
+      transform: scale(1.5);
+      
+    }
+  }
+  
+  
+  .fade-out {
+    animation: fadeOut ease 3s;
+    -webkit-animation: fadeOut ease 3s;
+    -moz-animation: fadeOut ease 3s;
+    -o-animation: fadeOut ease 3s;
+    -ms-animation: fadeOut ease 3s;
+   
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity:1;
+      transform: scale(1.5);
+      
+    }
+    100% {
+      opacity:0;
+      transform: scale(1);
+    
+    }
+  }
+  
+  
+  .fade-inchat {
+    animation: fadeInChat ease 3s;
+    -webkit-animation: fadeInChat ease 3s;
+    -moz-animation: fadeInChat ease 3s;
+    -o-animation: fadeInChat ease 3s;
+    -ms-animation: fadeInChat ease 3s;
+    transition: 1s ease-in-out;
+  }
+  @keyframes fadeInChat {
+    0% {
+      opacity:0;
+      transform: scale(0.7);
+    }
+    100% {
+      opacity:1;
+      transform: scale(1);
+    }
+  }
+
+
+  .pic{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piczoom{
+    transform: scale(1.5);
+    transition: 1s ease-in-out;
+   
+  }
