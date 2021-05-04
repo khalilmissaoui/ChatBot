@@ -72,7 +72,7 @@ router.post('/resetpasswordemail',async (req,res)=>{
         from:"chatbotPI@outlook.com",
         to:req.body.email,
         subject:"verify your password",
-        text:`here is a your new password  : " ${rand} ", save it , remember it and DONT LOSE IT `
+        text:`here is a your new password  : "${rand}", save it , remember it and DONT LOSE IT `
     
     }
     

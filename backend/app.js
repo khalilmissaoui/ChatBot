@@ -37,7 +37,7 @@ app.use("/", indexRouter);
 app.use('/login', require('./routes/userRouter')); // **
 
 
-
+app.get('/', (req, res) => { res.send('Hello from Express!')});
 
 
 app.get("*", (req, res) => {

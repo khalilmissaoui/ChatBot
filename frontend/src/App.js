@@ -35,7 +35,6 @@ const App = () => {
       console.log('your response for current user',response.data);
       setuser(response.data);
     });
-    history.push('/')
   }, []);
 
   const [user, setuser] = React.useState();
