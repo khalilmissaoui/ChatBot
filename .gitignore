@@ -16,9 +16,7 @@
 .env.production.local
 
 #authentication key
-authkey.json
 
-dev.js
 
 npm-debug.log*
 yarn-debug.log*
