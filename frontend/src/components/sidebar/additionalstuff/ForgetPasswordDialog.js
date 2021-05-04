@@ -16,7 +16,9 @@ export default function ForgetPasswordDialog({open , setOpen}) {
           email : input
       } 
       console.log(email);
-   // await axios.post('/login/forgot',email)
+    axios.post('/auth/resetpasswordemail',email).then((data)=>{
+      console.log(data.data);
+    })
     setOpen(false);
   };
 //open

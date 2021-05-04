@@ -35,6 +35,7 @@ const App = () => {
       console.log('your response for current user',response.data);
       setuser(response.data);
     });
+    history.push('/')
   }, []);
 
   const [user, setuser] = React.useState();
@@ -45,7 +46,7 @@ const App = () => {
       <div>
         <UserContext.Provider value={{ user, setuser }}>
           <Switch>
-            <Route path="/admin">
+           {user && user.role=='admin' && <Route path="/admin">
               <Router>
                 <React.Suspense fallback={loading}>
                   <Switch>
@@ -57,7 +58,7 @@ const App = () => {
                   </Switch>
                 </React.Suspense>
               </Router>
-            </Route>
+            </Route>}
             <Route path="/Introduction">
               <Introduction />
             </Route>
@@ -73,7 +74,7 @@ const App = () => {
             <Route path="/logout">
               <Logout />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
              {user ? <Welcome user={user} /> : <ChatbotAuth />}
             </Route>
           </Switch>

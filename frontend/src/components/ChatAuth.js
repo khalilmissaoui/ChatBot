@@ -28,7 +28,7 @@ function ChatAuth() {
                 <ChatMessageAuth  />
                <MessageInputAuth forget = {forget} setforget= {setforget}/>
             </Chat>
-            {forget && <a onClick={()=>{setOpen(true)}}>Click here to reset your password !</a>}
+            {forget && <a style={{color:'blue',textDecoration:'underline' , textShadow:'5px 5px 10px grey'}} onClick={()=>{setOpen(true)}}>Click here to reset your password !</a>}
             <ForgetPasswordDialog open={open} setOpen={setOpen} />
             </Container>
 

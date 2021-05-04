@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect , useContext} from 'react'
 import {
   TheContent,
   TheSidebar,
@@ -6,10 +7,14 @@ import {
   TheHeader
 } from './index'
 
-const TheLayout = () => {
 
+const TheLayout = () => {
+ 
+   
   return (
+    
     <div className="c-app c-default-layout">
+     
       <TheSidebar/>
       <div className="c-wrapper">
         <TheHeader/>
