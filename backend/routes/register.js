@@ -47,7 +47,7 @@ router.post('/saveUser', async(req,res)=>{
         from:"chatbotPI@outlook.com",
         to:user.email,
         subject:"verify your account",
-        text:`click on this link to verify your account http://localhost:3001/register/verify?jwt=${jwt_token}`
+        text:`click on this link to verify your account https://chatbotpi.herokuapp.com/register/verify?jwt=${jwt_token}`
     
     }
     
