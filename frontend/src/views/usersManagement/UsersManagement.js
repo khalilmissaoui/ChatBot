@@ -21,13 +21,13 @@ function UsersManagement() {
   const [usersList, setUsersList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/user").then((response) => {
+    Axios.get("https://chatbotpi.herokuapp.com/user").then((response) => {
       setUsersList(response.data);
       console.log(response.data)
     });
   }, []);
 
-  const deleteUser = (id) => {Axios.delete(`http://localhost:3001/user/delete/${id}`)}
+  const deleteUser = (id) => {Axios.delete(`https://chatbotpi.herokuapp.com/user/delete/${id}`)}
 
 
   return (

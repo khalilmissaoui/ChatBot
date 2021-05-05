@@ -38,7 +38,7 @@
     "styled-components": "^5.2.1",
     "yup": "^0.32.9"
   },
-  "proxy": "http://localhost:3001/",
+  "proxy": "https://chatbotpi.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },

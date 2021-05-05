@@ -17,6 +17,8 @@ import { UserContext } from "./contextProvider/contextProvider";
 import { useHistory } from "react-router-dom";
 import QuizCategories from "./components/Quiz/QuizCategories";
 import Logout from "./components/Logout"
+import styled from 'styled-components'
+
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>

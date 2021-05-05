@@ -42,7 +42,7 @@ const fields = [
   "Delete_report",
 ];
 const deleteReport = (id) => {
-  Axios.delete(`http://localhost:3001/report/delete/${id}`);
+  Axios.delete(`https://chatbotpi.herokuapp.com/report/delete/${id}`);
 };
 
 function Reports() {
@@ -56,13 +56,13 @@ function Reports() {
     );
   }
   useEffect(() => {
-    Axios.get("http://localhost:3001/report").then((response) => {
+    Axios.get("https://chatbotpi.herokuapp.com/report").then((response) => {
       setReportsList(response.data);
     });
   }, []);
 
   const updateStatus = async (id) => {
-    Axios.put(`http://localhost:3001/report/update/${id}`, {
+    Axios.put(`https://chatbotpi.herokuapp.com/report/update/${id}`, {
       statusUpdate: statusUpdate,
     });
     await window.location.reload(false);

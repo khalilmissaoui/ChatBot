@@ -31,19 +31,7 @@ const [linkedinDetails, setlinkedinDetails] = useState({})
   
   const handleImage = (event) =>{
     console.log('image : ',event.target.files[0]);
-    // setuserInfo({
-    //     ...userInfo,file:event.target.files[0],
-    //     filepreview: URL.createObjectURL(event.target.files[0])
-    // })
-    // //console.log(URL.createObjectURL(event.target.files[0]));
-    // const img = {
-    //   imgpic : URL.createObjectURL(event.target.files[0])
-    // }
-    // axios.post('/user/changeImage',img).then((data)=>{
-    //   console.log('thisisi s yiour data',data.data);
-    // }).catch((er)=>{
-    //   console.log(er);
-    // })
+
 console.log('user id ',user._id);
     const uploadTask = storage.ref(`images/${user._id}`).put(event.target.files[0]);
     uploadTask.on(
@@ -130,7 +118,6 @@ console.log('user id ',user._id);
                           user.imgpic ?<img src={`${user.imgpic}`}/>:
                           <img src='https://media.istockphoto.com/photos/businesswoman-portrait-on-white-picture-id615279718?k=6&m=615279718&s=612x612&w=0&h=ozD8oKRFXmyyXoAcDuo09WSkmtLSYYlOBuCCNrMyW2Y='/>
                         }
-                  
                       </div>
                     </Logo>
                     

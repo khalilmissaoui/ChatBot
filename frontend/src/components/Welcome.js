@@ -29,9 +29,15 @@ export default Welcome
 const Container = styled.div`
   width: 100%;
   height: 100vh;
+  background:white;
   display: grid;
+  background-color:white;
   grid-template-columns:  400px minmax(600px,1fr)  400px;
   @media (max-width: 1200px) { 
     grid-template-columns:  0% 100% 0%;
+  }
+  .dnKCVK{
+  background-color:white;
+  background:white;
   }
   `
