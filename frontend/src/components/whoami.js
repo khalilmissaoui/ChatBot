@@ -1,6 +1,6 @@
 import React from 'react'
 
-function whoami() {
+function Whoami() {
     return (
         <div>
               <h1>Flashbot for e-learning</h1>
@@ -17,4 +17,4 @@ function whoami() {
     )
 }
 
-export default whoami
+export default Whoami

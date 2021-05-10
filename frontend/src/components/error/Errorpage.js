@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './error.css'
 function Errorpage() {
     return (
@@ -7,7 +8,7 @@ function Errorpage() {
     <div class="err">4 0</div>
     <div class="err2">4</div>
     <div class="msg">Maybe you made a mistake ? maybe this page got deleted?
-     Never existed in the first place?<p>Let's go <a href="#"> home </a> and try from there.</p></div>
+     Never existed in the first place?<p>Let's go <Link to="/"> home </Link> and try from there.</p></div>
       </div> 
         
     )

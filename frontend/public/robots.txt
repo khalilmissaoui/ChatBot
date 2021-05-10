@@ -1,0 +1,7 @@
+User-agent: *
+Allow : *
+Disallow: /assets/
+Disallow : README.md
+
+
+Sitemap: https://flashbot-pi.herokuapp.com//sitemap.xml

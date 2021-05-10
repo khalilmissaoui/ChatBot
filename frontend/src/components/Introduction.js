@@ -1,13 +1,13 @@
 import React, {useState}from 'react'
 import IntroBox from './IntroBox'
 import styled from 'styled-components'
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Steps from './sidebar/additionalstuff/Steps';
 import {dispatchLogin} from '../Redux/actions/authAction'
 import {useDispatch} from 'react-redux'
 import axios from '../axios/axios'
 import { GoogleLogin } from 'react-google-login';
-
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 const initialState = {
   email: '',
@@ -48,12 +48,10 @@ function Introduction() {
         <Container>
           <Steps activeStep={0}/>
           <div style={{marginTop:'-60px' , height:'60px' , display:'flex' , justifyContent:'flex-end', marginRight:'150px'}}>
-            <GoogleLogin
-                    clientId="1089256486112-hb96hoccfg173p7vfl1mvt9cumacl26o.apps.googleusercontent.com"
-                    buttonText="Login with google"
-                    onSuccess={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                />
+         <GoogleButton>
+
+          <Link to='/whoami' style={{marginLeft:'5px' , textDecoration:'none'}} >WHO AM I <HelpOutlineIcon/></Link> 
+         </GoogleButton>
           </div>
           <HeadTitle>
             Choose your path
@@ -87,9 +85,9 @@ height: 100vh;
 `
 
 const GoogleButton =styled.button`
-width: 60px;
+width: 120px;
 height: 60px;
-border-radius: 30px;
+border-radius: 5px;
 display : flex ; 
 align-items : center ;
 justify-content : center ;
@@ -105,16 +103,8 @@ transition: all 0.3s ease 0s;
 cursor: pointer;
 outline: none;
 
-img {
-    width: 100%;
-      height: 100%;
-    
-    box-shadow :0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
 :hover{
- 
   box-shadow: 0px 15px 20px grey;
-  color: #fff;
   transform: translateY(-7px);
 }
 
