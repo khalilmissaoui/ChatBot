@@ -36,21 +36,23 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.4",
     "redux": "^4.0.5",
+    "serve": "^11.3.2",
     "styled-components": "^5.2.1",
     "yup": "^0.32.9"
   },
-  "proxy": "http://localhost:3001/",
+  "proxy": "https://chatbotpi.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "publish": "node ./scripts/publish",
     "test": "jest",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "dev": "react-scripts start"
   },
   "browserslist": [
     ">0.2%",
