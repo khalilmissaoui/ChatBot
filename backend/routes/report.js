@@ -6,7 +6,7 @@ const {Report} = require('../Models/reports')
 // /report
 router.post('/add',async (req,res)=>{
     const report = new Report({
-        'Description' : req.body.content ,
+        'content' : req.body.content ,
         'img' : req.body.img,
         'sender' : req.body.sender
     })

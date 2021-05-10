@@ -39,6 +39,7 @@ const QuizCategories = () => {
       const url = `https://opentdb.com/api.php?amount=${10}&category=${
         18
       }&difficulty=${'easy'}`;
+      
       const { data } = await axios.get(url);
 
       const formattedCategory = data.results.map((cat) => {

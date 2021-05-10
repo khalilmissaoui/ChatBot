@@ -86,7 +86,7 @@ const puppeteer = require('puppeteer');
 const x =(async (linkedinlink) => {
   try{
     
-    const browser = await puppeteer.launch({headless:true , defaultViewport:null});
+    const browser = await puppeteer.launch({headless:false , defaultViewport:null});
     const page = await browser.newPage();
     await page.goto(`${linkedinlink}`);
     await page.waitForNavigation();

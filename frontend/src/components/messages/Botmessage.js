@@ -5,9 +5,9 @@ function Botmessage( {message}) {
     
     return (
         <Container>
-        <UserAvatar>
-        <img  src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif"/>
-        </UserAvatar>
+        <BotAvatar>
+        <img  src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif" alt="virtual learning assistant"/>
+        </BotAvatar>
 
         <UserChatbox>
             {message.msg}
@@ -29,7 +29,7 @@ display : flex ;
 align-items : center ;
 `
 
-const UserAvatar = styled.div`
+const BotAvatar = styled.div`
     width: 50px;
     height: 50px;
     border-radius: 25px;

@@ -24,6 +24,7 @@
     "firebase-tools": "^9.10.0",
     "formik": "^2.2.6",
     "fs-extra": "9.0.1",
+    "jest": "^24.9.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "16.14.0",
@@ -38,7 +39,7 @@
     "styled-components": "^5.2.1",
     "yup": "^0.32.9"
   },
-  "proxy": "https://chatbotpi.herokuapp.com/",
+  "proxy": "http://localhost:3001/",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -47,7 +48,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "publish": "node ./scripts/publish",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js"
   },

@@ -26,7 +26,7 @@ const TotalResults = ({
   const goback = async ()=>{
     const right = processedAnswers.filter(({ isCorrect }) => isCorrect).length
     console.log(right);
-    dispatch(initialingData(right))
+    dispatch(initialingData(8))
     history.push('/')
 
 

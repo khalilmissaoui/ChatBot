@@ -18,11 +18,11 @@ function ChatbotAuth() {
         <Container>
             {loading? fadein?
                 <div className='fade-in pic piczoom'>
-                <img src='authpic2.png'  />
+                <img src='authpic2.png' alt='e-learning assitant' />
             </div>
             :
             <div className='pic fade-out piczoom'>
-            <img src='authpic2.png'  />
+            <img src='authpic2.png' alt='virtual learning chatbot' />
             </div>           
             :
             <div className='fade-inchat container'>

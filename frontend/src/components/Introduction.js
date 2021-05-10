@@ -35,7 +35,7 @@ function Introduction() {
 
         setUser({...user, error:'', success: res.data.msg})
         localStorage.setItem('firstLogin', true)
-
+        
         dispatch(dispatchLogin())
         history.push('/')
     } catch (err) {
@@ -59,6 +59,7 @@ function Introduction() {
             Choose your path
           </HeadTitle>
           <TwoWays>
+        
           <Statics onClick={()=>gotoregister()}>
                 <StaticBox> 
                 Register phase from this way

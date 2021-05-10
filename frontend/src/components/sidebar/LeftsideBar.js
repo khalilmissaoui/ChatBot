@@ -46,7 +46,7 @@ function LeftsideBar() {
         
             <Logo>
                <Head>
-                <img src="/flashboticon.PNG"/>
+                <img src="/flashboticon.PNG" alt="flashbot"/>
                </Head>
                <div>
                  FlashBot 

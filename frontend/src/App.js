@@ -18,6 +18,7 @@ import { useHistory } from "react-router-dom";
 import QuizCategories from "./components/Quiz/QuizCategories";
 import Logout from "./components/Logout"
 import styled from 'styled-components'
+import Errorpage from "./components/error/Errorpage";
 
 const loading = (
   <div className="pt-3 text-center">
@@ -74,6 +75,9 @@ const App = () => {
             </Route>
             <Route path="/logout">
               <Logout />
+            </Route>
+            <Route path="/error">
+              <Errorpage />
             </Route>
             <Route exact path="/">
              {user ? <Welcome user={user} /> : <ChatbotAuth />}
