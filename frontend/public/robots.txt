@@ -1,6 +1,7 @@
 User-agent: *
 Allow : *
 Disallow: /assets/
+Disallow: /admin/
 Disallow : README.md
 
 
