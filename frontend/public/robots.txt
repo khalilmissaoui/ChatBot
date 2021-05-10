@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow : README.md
 
 
-Sitemap: https://flashbot-piweb.herokuapp.com//sitemap.xml
+Sitemap: https://flashbot-pi.herokuapp.com//sitemap.xml

@@ -6,12 +6,12 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://flashbot-piweb.herokuapp.com/</loc>
+  <loc>https://flashbot-pi.herokuapp.com/</loc>
   <lastmod>2021-05-10T03:42:09+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://flashbot-piweb.herokuapp.com/whoami</loc>
+  <loc>https://flashbot-pi.herokuapp.com/whoami</loc>
   <lastmod>2021-05-10T03:42:09+00:00</lastmod>
   <priority>0.90</priority>
 
