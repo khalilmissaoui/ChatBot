@@ -19,7 +19,7 @@ import QuizCategories from "./components/Quiz/QuizCategories";
 import Logout from "./components/Logout"
 import styled from 'styled-components'
 import Errorpage from "./components/error/Errorpage";
-import Whoami from "./components/Whoami";
+
 
 const loading = (
   <div className="pt-3 text-center">
@@ -80,9 +80,9 @@ const App = () => {
             <Route path="/error">
               <Errorpage />
             </Route>
-            <Route path="/whoami">
+            {/* <Route path="/whoami">
               <Whoami />
-            </Route>
+            </Route> */}
             
             <Route exact path="/">
              {user ? <Welcome user={user} /> : <ChatbotAuth />}
