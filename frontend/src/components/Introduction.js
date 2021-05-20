@@ -48,10 +48,10 @@ function Introduction() {
         <Container>
           <Steps activeStep={0}/>
           <div style={{marginTop:'-60px' , height:'60px' , display:'flex' , justifyContent:'flex-end', marginRight:'150px'}}>
-         <GoogleButton>
+          <GoogleButton>
 
           <Link to='/whoami' style={{marginLeft:'5px' , textDecoration:'none'}} >WHO AM I <HelpOutlineIcon/></Link> 
-         </GoogleButton>
+          </GoogleButton>
           </div>
           <HeadTitle>
             Choose your path
